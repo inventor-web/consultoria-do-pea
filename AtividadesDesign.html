@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades de Design - Consultoria PEA</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background:  #f4f4f4;;
+        }
+
+         
+          header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #008080; 
+          color: white;
+          padding: 10px 15px;
+          position: relative;
+          z-index: 100;
+        }
+
+        .logo img {
+            height: 100px;
+            width: 350px;
+        }
+
+    
+        nav .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu > li {
+            margin: 10px 30px; 
+            cursor: pointer;
+            position: relative;
+            z-index: 101;
+           }
+
+           .menu a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu > li:hover .submenu {
+            display: block;
+        }
+
+   
+        .social-icons {  
+         display: flex;
+         gap: 10px;
+     }
+     
+     .social-icons a {
+         color: white;
+         text-decoration: none;
+         font-size: 20px;
+     }
+
+     
+
+        
+        .submenu {
+          display: none;
+          position: absolute;
+          background-color: #066161;
+          padding: 10px 0; 
+          list-style: none;
+          margin: 0;
+          z-index: 102;
+          width: 250px; 
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+          border-radius: 5px; 
+         }
+
+        .submenu li {
+         padding: 8px 15px; 
+         color: white;
+         cursor: pointer;
+         font-size: 14px; 
+         text-align: left; 
+        }
+
+      .submenu li:hover {
+        background-color: #008080;
+        }
+
+
+     
+        .virtuous{
+          width: 800px;
+          background-color: #008080;
+          color: white;
+          padding: 20px;
+          position: relative; 
+          top: 35px; 
+          justify-content: center; 
+          align-items: center;   
+          margin: 0 auto;
+          text-align: justify;
+       } 
+
+       .virtuous h1{
+         text-align: center;
+         font-size: 25px;
+       }
+
+       .virtuous h2{
+          font-size: 20px;
+       }
+
+       .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 10px;
+        width: 55%;
+        max-width: 800px;
+        padding: 55px;
+        margin: 0 auto; 
+            
+          
+    }
+
+    .card {
+        position: relative; 
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        flex: 1 1 calc(33.333% - 20px);
+        max-width: calc(33.333% - 20px);
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: inherit;
+        overflow: hidden; 
+        transition: all 0.3s ease;
+    }
+
+    .card img {
+        width: 100%;
+        border-bottom: 3px solid #008080;
+    }
+
+    .card h3 {
+        background-color: #008080;
+        color: #fff;
+        margin: 0;
+        padding: 10px;
+        font-size: 1.2em;
+    }
+
+    .card p {
+        padding: 10px;
+        margin: 0;
+        color: #333;
+    }
+
+    .card::before,
+    .card::after {
+        content: '';
+        position: absolute;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+    }
+
+    .card::before {
+        top: 0;
+        left: 0;
+        height: 3px;
+        width: 100%;
+    }
+
+    .card::after {
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 100%;
+    }
+
+    .card:hover::before,
+    .card:hover::after {
+        background-color: #008080; 
+    }
+
+    .card:hover {
+        border-left: 3px solid #008080;
+        border-right: 3px solid #008080;
+    }
+
+    @media (max-width: 768px) {
+        .card {
+            flex: 1 1 calc(50% - 20px);
+            max-width: calc(50% - 20px);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .card {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+    }
+
+
+
+    .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin-top: 0%;
+            position: relative;  
+        }
+        .section {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 100%;
+            max-width: 690px;
+        }
+        .section h2 {
+            background-color: #d3e9b9;
+            color: #008080;
+            font-size: 18px;
+            margin: -15px -15px 15px -15px;
+            padding: 10px;
+            text-align: center;
+        }
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin-bottom: 10px;
+        }
+        .section ul li i {
+            margin-right: 5px;
+        }
+        .section a {
+            color: #4a8c2f;
+            text-decoration: none;
+        }
+        .section a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: right;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .footer a {
+            color: #4a8c2f;
+        }
+        .glossary, .news {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 690px;
+        }
+        .glossary .section, .news .section {
+            width: 48%;
+        }
+
+
+
+
+
+
+
+
+        .footer4 {
+            text-align: center;
+            background: #004c4c;
+            color: #fff;
+            padding: 10px 0;
+        }
+        .footer4 .container4 {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer4 .column4 {
+            flex: 1;
+            min-width: 200px;
+            margin: 20px;
+        }
+        .footer4 .column4 h3 {
+            border-bottom: 1px solid white;
+            padding-bottom: 5px;
+            color: #fff;
+            
+        }
+        .footer4 .column4 ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer4 .column4 ul li {
+            margin: 10px 0;
+        }
+        .footer4 .column4 ul li h4{
+            margin: 10px 0;
+        }
+        .footer4 .column4 ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer4 .column4 ul li a:hover {
+            text-decoration: underline;
+        }
+        .footer4 .social-icons4 {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px 0;
+        }
+
+        .footer4 .social-icons4 a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .footer4 .social-icons4 a:hover {
+            color: #00ffff;
+        }
+
+        .footer4 .bottom-bar4 {
+            background-color: #f0f0f0;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .footer4 .bottom-bar4 img {
+            margin: 0 5px;
+        }
+        .footer4 .bottom-bar4 p {
+            margin: 10px 0 0;
+            color: #004c4c;
+        } 
+
+
+
+ </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logotipo">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li>Serviços
+                    <ul class="submenu">
+                        <li> <a href="ContabilidadeAuditoria.html"> Contabilidade e Auditoria </a></li>
+                        <li> <a href="ServiçosAdministrativos.html"> Serviços Administrativos </a></li>
+                        <li> <a href="AtividadesProgramaçãoInformática.html"> Atividades de Programação Informática </a></li>
+                        <li> <a href="AtividadesDesign.html"> Atividades de Design </a></li>
+                        <li> <a href="AuxílioElaboraçãoProjetosPesquisaCientíficaCampo.html"> Auxílio na Elaboração de Projetos de Pesquisa Científica e de Campo </a></li>
+                        <li> <a href="ElaboraçãoPlanosNegócios.html"> Elaboração de Planos de Negócios </a></li>
+                        <li> <a href="WorkshopsPalestras.html"> Workshops e Palestras </a></li>
+                    </ul>
+                </li>
+                <li>Cursos
+                    <ul class="submenu">
+                        <li> <a href="ContabilidadeBásica.html"> Contabilidade Básica </a></li>
+                        <li>Higiene e Segurança no Trabalho</li>
+                        <li>Marketing e Técnicas de Vendas</li>
+                        <li>Secretariado e Administração de Escritórios</li>
+                        <li>Inglês Básico</li>
+                        <li>Logística e Procurement</li>
+                        <li>Gestão de Recursos Humanos</li>
+                        <li>Elaboração e Gestão de Projetos</li>
+                        <li>Gestão Empresarial</li>
+                        <li>Relações Públicas e Liderança</li>
+                        <li>Sabedoria</li>
+                    </ul>
+                </li>
+                <li>Materiais Didáticos
+                    <ul class="submenu">
+                        <li>N</li>
+                        <li>O</li>
+                        <li>P</li>
+                        <li>Q</li>
+                        <li>R</li>
+                    </ul>
+                </li>
+                <li>Pratique
+                    <ul class="submenu">
+                        <li>S</li>
+                        <li>T</li>
+                        <li>U</li>
+                        <li>V</li>
+                    </ul>
+                </li>
+                <li>Prova Social
+                    <ul class="submenu">
+                        <li>W</li>
+                        <li>X</li>
+                        <li>Y</li>
+                        <li>Z</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61555703641141"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/consultoria_dopea?igsh=MWF4eGV4Zmk5eXI3dQ"><i class="fab fa-instagram"></i></a>
+            <a href="https://chat.whatsapp.com/BezGfxuZfQy0mZ1Nz08pG4"><i class="fab fa-whatsapp"></i></a>
+          </div>
+     </header>
+
+     <section class="virtuous">
+     <h1>Explorando as Atividades de Design</h1>
+     
+     <h2>Design: O que é isso, afinal?</h2>
+     <p>
+         O design é uma forma criativa de resolver problemas e transmitir ideias. Seja na criação de um site, em uma embalagem atraente ou no layout de um aplicativo, o design está em todo lugar, combinando beleza e funcionalidade para melhorar a experiência das pessoas.
+     </p>
+     
+     <h2>O Papel do Designer</h2>
+     <p>
+         O designer é o profissional que transforma conceitos em realidade. Ele combina cores, formas, imagens e tipografias para criar algo único e marcante. Além disso, o designer também pensa em como as pessoas vão interagir com aquilo que ele está criando, sempre buscando soluções práticas e inovadoras.
+     </p>
+     
+     <h2>A Importância do Design no Dia a Dia</h2>
+     <p>
+         O design não é apenas sobre estética, ele impacta diretamente como percebemos e utilizamos o mundo ao nosso redor. Um bom design facilita a comunicação, torna produtos mais fáceis de usar e cria conexões emocionais. É a peça-chave para destacar marcas, produtos e serviços em um mercado competitivo.
+     </p>
+ </section>
+ 
+ 
+ 
+    
+    </section>
+
+    <div class="grid">
+        <a href="#" class="card">
+            <img alt="Imagem representando sabedoria" height="150" src="Img/Sabedoria.jfif" width="300"/>
+            <h3> Sabedoria </h3>
+            <p> Sabedoria é a habilidade de aplicar conhecimento com discernimento, guiando decisões e ações para um bem maior. </p>
+        </a>
+        <a href="#" class="card">
+            <img alt="Imagem representando inglês básico" height="150" src="English2.jpg" width="300"/>
+            <h3> Inglês Básico </h3>
+            <p> Aprenda o básico do inglês: saudações, números, cores, expressões simples, construção de frases básicas...</p>
+        </a>
+        <a href="#" class="card">
+            <img alt="Imagem representando workshops e palestras" height="150" src="WPalestra2.jfif" width="300"/>
+            <h3> Workshops&Palestras </h3>
+            <p> Venha aprender e trocar ideias em workshops e palestras, e se inspirar com especialistas de diversas áreas. </p>
+        </a>
+        <a href="ContabilidadeAuditoria.html" class="card">
+            <img alt="Imagem representando contabilidade e auditoria" height="150" src="Img/CAuditoria.jfif" width="300"/>
+            <h3> Contabilidade e Auditoria </h3>
+            <p> Aprenda sobre finanças, contabilidade e auditoria de forma prática e clara. </p>
+        </a>
+        <a href="#" class="card">
+            <img alt="Imagem representando elaboração e gestão de projeto" height="150" src="Img/EGEmpresarial.jfif" width="300"/>
+            <h3> Elaboração e Gestão de Projeto </h3>
+            <p> Desenvolva habilidades para planejar, executar e gerenciar projetos com eficiência e organização. </p>
+        </a>
+        <a href="#" class="card">
+            <img alt="Imagem representando marketing e técnicas de vendas" height="150" src="Img/MTVenda.jfif" width="300"/>
+            <h3> Marketing e Técnicas de Vendas </h3>
+            <p> Aprenda estratégias de marketing e técnicas para melhorar suas vendas e conquistar clientes. </p>
+        </a>
+    </div>
+
+
+    <div class="container">
+        <div class="section">
+            <h2>Curiosidades</h2>
+            <ul>
+                <li><i class="fas fa-eye"></i>  
+                    <a href="#"> Como melhorar a eficiência dos seus processos administrativos? </a> 
+                </li>                
+                <li><i class="fas fa-eye"></i>  
+                    <a href="#"> Descubra as 7 melhores práticas em design criativo </a>  
+                </li>                
+                <li><i class="fas fa-eye"></i>  
+                    <a href="#"> Saiba como melhorar a gestão logística e de compras </a>  
+                </li>                
+                <li><i class="fas fa-eye"></i>  
+                    <a href="#"> 15 práticas essenciais para garantir um ambiente de trabalho seguro </a>  
+                </li>                
+                <li><i class="fas fa-eye"></i>  
+                    <a href="#"> 12 estratégias surpreendentes para fortalecer liderança e relações públicas </a>  
+                </li>                
+                <li><i class="fas fa-eye"></i>  
+                    <a href="#"> Descubra 9 estratégias inovadoras para aprimorar a gestão de recursos humanos </a>  
+                </li>                
+                <li><i class="fas fa-eye"></i>  
+                    <a href="#"> O que seria de um escritório sem uma boa gestão administrativa? </a>  
+                </li>                
+            
+            <div class="footer">
+                Para ver mais curiosidades, <a href="#">clique aqui.</a>
+            </div>
+        </div>
+        <div class="glossary">
+            <div class="section">
+                <h2>Glossário</h2>
+                <ul>
+                    <li><i class="fas fa-book"></i><strong>Workshops e Palestras</strong> - Eventos interativos para compartilhamento de conhecimento e desenvolvimento de habilidades.</li>
+                    <li><i class="fas fa-book"></i><strong>Contabilidade Básica</strong> - Princípios essenciais para registrar, organizar e interpretar transações financeiras.</li>
+                    <li><i class="fas fa-book"></i><strong>Elaboração de Plano de Negócio</strong> - Processo estruturado para definir objetivos, estratégias e viabilidade de um empreendimento.</li>
+                </ul>                               
+                <div class="footer">
+                    Para ver todo o glossário, <a href="#">clique aqui.</a>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Novidades</h2>
+                <ul>
+                    <li><i class="fas fa-comments"></i><a href="#"><strong>Curiosidades</strong> - As palavras mais fáceis de aprender no inglês que você não conhecia...</a></li>
+                    <li><i class="fas fa-comments"></i><a href="#"><strong>Curiosidades</strong> - Dicas para influenciar a decisão dos seus clientes?</a></li>
+                    <li><i class="fas fa-comments"></i><a href="#"><strong>Curiosidades</strong> - Como planejar um projeto de forma eficiente e bem organizada?</a></li>
+                    <li><i class="fas fa-comments"></i><a href="#"><strong>Curiosidades</strong> - A importância de integrar relações públicas e liderança?</a></li>
+                    <li><i class="fas fa-comments"></i><a href="#"><strong>Curiosidades</strong> - Como aprimorar suas habilidades em design?</a></li>
+                    <li><i class="fas fa-comments"></i><a href="#"><strong>Curiosidades</strong> - Como melhorar a sua inteligência de maneira eficaz?</a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+    
+
+    <footer class="footer4">
+        <div class="container4">
+         <div class="column4">
+          <h3> Quem somos </h3>
+          <ul>
+           <li> <a href="Virtuous.HTML"> Sobre a Virtuous </a></li>
+           <li> <h4> Redes sociais </h4></li>
+          </ul>
+          <div class="social-icons4">
+           <a href="https://www.facebook.com/profile.php?id=61555703641141"> <i class="fab fa-facebook"></i>
+           <a href="https://www.instagram.com/consultoria_dopea?igsh=MWF4eGV4Zmk5eXI3dQ"> <i class="fab fa-instagram"></i>
+           <a href="https://chat.whatsapp.com/BezGfxuZfQy0mZ1Nz08pG4"> <i class="fab fa-whatsapp"></i>
+          </div>
+         </div>
+         <div class="column4">
+          <h3> Informações </h3>
+          <ul>
+           <li> <a href="PolíticaPrivacidade.HTML"> Política de privacidade </a></li>
+           <li> <a href="ContratoUsuário.HTML"> Contrato do usuário </a></li>
+          </ul>
+         </div>
+         <div class="column4">
+          <h3> Contato </h3>
+          <ul>
+           <li> <a href="#"> Indique o site </a></li>
+           <li> <a href="#"> Fale conosco </a></li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      
+       <div class="bottom-bar4">
+         <p> Copyright © 2024 - 2025 Consultoria PEA. Todos os direitos reservados. Desenvolvido por Virtuous. </p>
+        </div>
+       </footer>    
+
+</body>
+</html> 
