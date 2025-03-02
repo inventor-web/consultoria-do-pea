@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultoria - Menu Responsivo</title>
+  <style>
+    /* Estilos gerais */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2c3e50;
+      padding: 10px 20px;
+      color: white;
+    }
+
+    /* Links de navegação */
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Ícone de hambúrguer (oculto por padrão) */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+
+    /* Estilos para dispositivos móveis */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #2c3e50;
+        width: 150px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Consultoria</div>
+    <!-- Ícone de hambúrguer -->
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <!-- Links de navegação -->
+    <div class="nav-links" id="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Sobre</a>
+      <a href="#">Serviços</a>
+      <a href="#">Contato</a>
+    </div>
+  </nav>
+
+  <script>
+    // Função para alternar o menu
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('active');
+    }
+
+    // Fechar o menu ao clicar fora dele
+    document.addEventListener('click', (event) => {
+      const nav = document.getElementById('nav-links');
+      const hamburger = document.getElementById('hamburger');
+
+      // Verifica se o clique foi fora do menu e do ícone do hambúrguer
+      if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+        nav.classList.remove('active'); // Fecha o menu
+      }
+    });
+  </script>
+</body>
+</html>
