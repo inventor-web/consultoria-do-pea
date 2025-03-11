@@ -1,0 +1,221 @@
+/*----------------------------------Cabecalho de navegacao-----------------------------*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to right, #aad1d1, #008080 45%); 
+    color: white;
+    padding: 10px 15px;
+    position: relative;
+    z-index: 100;
+    min-width: 500px;
+  }
+  
+  .logo img {
+      height: 100px;
+      width: 350px;
+
+  }
+  
+
+  nav .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+  }
+  
+  .menu > li {
+      margin: 10px 30px; 
+      cursor: pointer;
+      position: relative;
+      z-index: 101;
+     }
+   
+  .menu a{
+      color: white;
+      text-decoration: none;
+  }
+  
+  .menu > li:hover {
+    /* background-image: linear-gradient(to right,#066161, #508b8b
+    );
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px; */
+    font-weight: 700;
+    font-size: large;
+  }
+
+  .menu > li:hover .submenu {
+      display: block;
+  }
+  
+  
+  .social-icons {  
+   display: flex;
+   gap: 10px;
+  }
+  
+  .social-icons a {
+   color: white;
+   text-decoration: none;
+   font-size: 20px;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    background-color: #066161;
+    padding: 10px 0; 
+    list-style: none;
+    margin: 0;
+    z-index: 102;
+    width: 250px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 5px; 
+   }
+  
+  .submenu li {
+   padding: 8px 15px; 
+   color: white;
+   cursor: pointer;
+   font-size: 14px; 
+   text-align: left; 
+  }
+  
+  .submenu li:hover {
+  background-color: #008080;
+  }
+/*--------------------------------------------------------------------------------------------*/
+
+
+
+/*..............................................Rodape.........................................*/
+
+
+.footer4 {
+    text-align: center;
+    background: #004c4c;
+    color: #fff;
+    padding: 10px 0;
+}
+.footer4 .container4 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer4 .column4 {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+}
+.footer4 .column4 h3 {
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    color: #fff;
+    
+}
+.footer4 .column4 ul {
+    list-style: none;
+    padding: 0;
+}
+.footer4 .column4 ul li {
+    margin: 10px 0;
+}
+.footer4 .column4 ul li h4{
+    margin: 10px 0;
+}
+.footer4 .column4 ul li a {
+    color: white;
+    text-decoration: none;
+}
+.footer4 .column4 ul li a:hover {
+    text-decoration: underline;
+}
+.footer4 .social-icons4 {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+.footer4 .social-icons4 a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer4 .social-icons4 a:hover {
+    color: #00ffff;
+}
+
+.footer4 .bottom-bar4 {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    text-align: center;
+}
+.footer4 .bottom-bar4 img {
+    margin: 0 5px;
+}
+.footer4 .bottom-bar4 p {
+    margin: 10px 0 0;
+    color: #004c4c;
+} 
+
+
+/*----------------------------Responsividade para dispositivos moveis---------------------------------*/
+
+/*---------Dispositivos maiores------------*/
+@media (max-width: 768px) {
+.card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+}
+}
+
+/*---------Dispositivos medios------------*/
+
+@media (max-width: 480px) {
+.card {
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+
+
+@media (max-width: 360px) {
+/* Media Query for Samsung A01 (360px) */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 5px 10px;
+    }
+
+    .logo img {
+        height: 50px;
+        width: 150px;
+    }
+
+    nav .menu {
+        font-size: 14px;
+    }
+
+    .submenu li {
+        font-size: 12px;
+    }
+
+    .footer4 .container4 {
+        padding: 0 10px;
+    }
+
+    .footer4 .bottom-bar4 p {
+        font-size: 12px;
+    }
+}
+
+}
+
+
+}
+/*----------------------------------------------------------------------------------------------------------*/

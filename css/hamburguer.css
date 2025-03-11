@@ -1,0 +1,50 @@
+/* Estilo do ícone de hamburguer */
+.hamburger {
+    display: none; /* Oculta o ícone por padrão */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Mostra o ícone em telas menores que 768px */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Exibe o ícone */
+    }
+
+    .menu-container {
+        display: none; /* Oculta o menu por padrão em telas pequenas */
+        width: 100%;
+        background-color: var(--white);
+        position: absolute;
+        top: 60px; /* Ajuste conforme a altura do header */
+        left: 0;
+        z-index: 1000;
+    }
+
+    .menu-container.active {
+        display: block; /* Exibe o menu quando ativo */
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .submenu {
+        position: static;
+        display: none; /* Oculta submenus por padrão */
+    }
+
+    .menu li:hover .submenu {
+        display: block; /* Exibe submenus ao passar o mouse */
+    }
+}
